@@ -1,0 +1,5 @@
+{
+  "name": "Gerador de Palpites Lotomania",
+  "description": "Um aplicativo avançado para gerenciar sequências da Lotomania, com estatísticas detalhadas e previsões baseadas em lógica de Redes Neurais LSTM.",
+  "requestFramePermissions": []
+}
