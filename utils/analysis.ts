@@ -4,7 +4,7 @@ import { Sequence, Stats, Prediction } from '../types';
 export const calculateStats = (history: Sequence[]): Stats => {
   const counts: Record<number, number> = {};
   const lastSeen: Record<number, number> = {};
-  
+
   // Initialize
   for (let i = 1; i <= 100; i++) {
     counts[i] = 0;
@@ -56,9 +56,9 @@ export const generateLSTMPredictions = (history: Sequence[], stats: Stats): Pred
 
   const predictions: Prediction[] = [];
 
-  for (let p = 0; p < 4; p++) {
+  for (let p = 0; p < 10; p++) {
     const selected = new Set<number>();
-    
+
     // Logic: Mix of high frequency, high delay, and stochastic sampling weighted by probabilityMap
     const probEntries = Object.entries(stats.probabilityMap)
       .map(([num, prob]) => ({ num: parseInt(num), prob }))
