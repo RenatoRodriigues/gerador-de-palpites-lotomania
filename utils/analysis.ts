@@ -40,9 +40,9 @@ export const calculateStats = (history: Sequence[]): Stats => {
   }
 
   return {
-    mostFrequent: sortedByFreq.slice(0, 5),
-    leastFrequent: sortedByFreq.slice(-5).reverse(),
-    mostDelayed: sortedByDelay.slice(0, 5),
+    mostFrequent: sortedByFreq.slice(0, 10),
+    leastFrequent: sortedByFreq.slice(-10).reverse(),
+    mostDelayed: sortedByDelay.slice(0, 10),
     probabilityMap
   };
 };
